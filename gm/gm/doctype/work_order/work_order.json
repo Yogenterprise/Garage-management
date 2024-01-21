@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:WORK-ORD-{MM}-{YYYY}-{####}",
+ "creation": "2024-01-21 14:14:39.166748",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_card_ref",
+  "service_name",
+  "service_details",
+  "quantity",
+  "vehicle_details_section",
+  "vehicle_number",
+  "vehicle_model",
+  "vehicle_brand",
+  "engine_capccity"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_card_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Card Reference",
+   "options": "Job Cart",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "label": "Service Name"
+  },
+  {
+   "fieldname": "service_details",
+   "fieldtype": "Link",
+   "label": "Service Details",
+   "options": "Service Details"
+  },
+  {
+   "fetch_from": "service_details.quantity",
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fetch_from": "job_card_ref.vehicle_number",
+   "fieldname": "vehicle_number",
+   "fieldtype": "Read Only",
+   "label": "Vehicle Number",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "vehicle_details_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Details"
+  },
+  {
+   "fetch_from": "job_card_ref.vehicle_model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Read Only",
+   "label": "Vehicle Model"
+  },
+  {
+   "fetch_from": "job_card_ref.vehicle_brand",
+   "fieldname": "vehicle_brand",
+   "fieldtype": "Read Only",
+   "label": "Brand"
+  },
+  {
+   "fetch_from": "job_card_ref.engine_capccity",
+   "fieldname": "engine_capccity",
+   "fieldtype": "Read Only",
+   "label": "Engine Capacity"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-21 14:21:15.383839",
+ "modified_by": "Administrator",
+ "module": "Gm",
+ "name": "Work order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

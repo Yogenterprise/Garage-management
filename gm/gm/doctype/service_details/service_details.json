@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SERV-{MM}-{YYYY}-{####}",
+ "creation": "2024-01-21 11:48:24.479889",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "s_p_name",
+  "description",
+  "quantity",
+  "rate",
+  "amount",
+  "work_ord_ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "s_p_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service or Product Name",
+   "options": "Product",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fetch_from": "s_p_name.product_rate",
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "work_ord_ref",
+   "fieldtype": "Link",
+   "label": "Work Order Referece",
+   "options": "Work order"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-21 14:27:52.031996",
+ "modified_by": "Administrator",
+ "module": "Gm",
+ "name": "Service Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
