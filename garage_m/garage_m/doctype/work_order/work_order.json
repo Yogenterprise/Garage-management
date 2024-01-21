@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-21 14:33:05.138682",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_cart_reference",
+  "service_name",
+  "quantity",
+  "vehichle_details",
+  "vehicle_no",
+  "vehichle_model",
+  "vehichle_brand",
+  "brand",
+  "engine_capacity"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_cart_reference",
+   "fieldtype": "Link",
+   "label": "Job cart reference",
+   "options": "Job_cart"
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "label": "service_name",
+   "options": "Job_cart"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "quantity",
+   "options": "Job_cart"
+  },
+  {
+   "fieldname": "vehichle_details",
+   "fieldtype": "Data",
+   "label": "vehichle_details"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "vehicle_no",
+   "options": "Job_cart"
+  },
+  {
+   "fieldname": "vehichle_model",
+   "fieldtype": "Data",
+   "label": "vehichle_model",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehichle_brand",
+   "fieldtype": "Data",
+   "label": "vehichle_brand"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "brand"
+  },
+  {
+   "fieldname": "engine_capacity",
+   "fieldtype": "Data",
+   "label": "engine_capacity"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-21 14:33:30.575546",
+ "modified_by": "Administrator",
+ "module": "Garage M",
+ "name": "Work_order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

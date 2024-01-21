@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ser.##",
+ "creation": "2024-01-21 12:23:14.777706",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_or_product_name",
+  "quantity",
+  "rate",
+  "description",
+  "amount",
+  "work_order_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_or_product_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "service or product name",
+   "options": "Product"
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "quantity",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "service_or_product_name.rate",
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "description"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_order_reference",
+   "fieldtype": "Link",
+   "label": "work_order_reference",
+   "options": "Work_order"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-21 14:33:45.783270",
+ "modified_by": "Administrator",
+ "module": "Garage M",
+ "name": "Service_details",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

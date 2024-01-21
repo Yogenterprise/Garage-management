@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "JC.##",
+ "creation": "2024-01-21 12:10:32.789584",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_details_section",
+  "customer_name",
+  "customer_mobile",
+  "column_break_9d3pz",
+  "customer_address",
+  "vehicle_details_section",
+  "vehicle_no",
+  "vehicle_model",
+  "brand_name",
+  "engine_capacity",
+  "service_details_section",
+  "service_table",
+  "total_amount",
+  "advance_received",
+  "net_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer_details"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "customer_name",
+   "options": "Customer_details"
+  },
+  {
+   "fetch_from": "customer_name.customer_address",
+   "fieldname": "customer_address",
+   "fieldtype": "Small Text",
+   "label": "customer_address"
+  },
+  {
+   "fetch_from": "customer_name.customer_mobile",
+   "fieldname": "customer_mobile",
+   "fieldtype": "Data",
+   "label": "customer_mobile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle_details_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle_details"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "vehicle_no"
+  },
+  {
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "vehicle_model"
+  },
+  {
+   "fieldname": "brand_name",
+   "fieldtype": "Link",
+   "label": "brand_name",
+   "options": "Brand_name"
+  },
+  {
+   "fieldname": "engine_capacity",
+   "fieldtype": "Float",
+   "label": "engine_capacity"
+  },
+  {
+   "fieldname": "service_details_section",
+   "fieldtype": "Section Break",
+   "label": "Service_details"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "total amount"
+  },
+  {
+   "fieldname": "advance_received",
+   "fieldtype": "Float",
+   "label": "advance received"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Float",
+   "label": "net amount"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job_cart",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_9d3pz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_table",
+   "fieldtype": "Table",
+   "label": "Service Table",
+   "options": "Service_details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-21 14:09:14.776502",
+ "modified_by": "Administrator",
+ "module": "Garage M",
+ "name": "Job_cart",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
