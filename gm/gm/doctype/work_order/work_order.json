@@ -7,23 +7,32 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "mechanic_remark",
+  "status_column",
+  "job_status",
+  "inspection_required",
+  "job_details_section",
   "job_card_ref",
   "service_name",
-  "service_details",
   "quantity",
+  "rate",
+  "amount",
+  "description",
   "vehicle_details_section",
   "vehicle_number",
   "vehicle_model",
   "vehicle_brand",
-  "engine_capccity"
+  "engine_capacity",
+  "inspection_details_section",
+  "inspection_details",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "job_card_ref",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Job Card Reference",
-   "options": "Job Cart",
    "reqd": 1
   },
   {
@@ -32,15 +41,9 @@
    "label": "Service Name"
   },
   {
-   "fieldname": "service_details",
-   "fieldtype": "Link",
-   "label": "Service Details",
-   "options": "Service Details"
-  },
-  {
    "fetch_from": "service_details.quantity",
    "fieldname": "quantity",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Quantity"
   },
   {
@@ -69,15 +72,84 @@
    "label": "Brand"
   },
   {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
    "fetch_from": "job_card_ref.engine_capccity",
-   "fieldname": "engine_capccity",
+   "fieldname": "engine_capacity",
    "fieldtype": "Read Only",
    "label": "Engine Capacity"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Work order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "mechanic_remark",
+   "fieldtype": "Small Text",
+   "label": "Mechanic Remarks"
+  },
+  {
+   "fieldname": "job_details_section",
+   "fieldtype": "Section Break",
+   "label": "Job Details"
+  },
+  {
+   "fieldname": "status_column",
+   "fieldtype": "Column Break",
+   "label": "Job Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "job_status",
+   "fieldtype": "Check",
+   "label": "Job Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "inspection_required",
+   "fieldtype": "Check",
+   "label": "Inspection Required"
+  },
+  {
+   "depends_on": "inspection_required",
+   "fieldname": "inspection_details_section",
+   "fieldtype": "Section Break",
+   "label": "Inspection Details"
+  },
+  {
+   "depends_on": "inspection_required",
+   "fieldname": "inspection_details",
+   "fieldtype": "Table",
+   "label": "Inspection Details",
+   "mandatory_depends_on": "inspection_required",
+   "options": "Quality Inspection"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-21 14:21:15.383839",
+ "modified": "2024-01-24 16:54:45.364078",
  "modified_by": "Administrator",
  "module": "Gm",
  "name": "Work order",

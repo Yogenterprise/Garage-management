@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-24 15:11:03.927852",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "parameter_description",
+  "acceptable_value",
+  "parameter_reading",
+  "inspection_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parameter",
+   "options": "Parameter",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "parameter.parameter_description",
+   "fieldname": "parameter_description",
+   "fieldtype": "Read Only",
+   "label": "Description"
+  },
+  {
+   "fetch_from": "parameter.accepted_value",
+   "fieldname": "acceptable_value",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Acceptable Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parameter_reading",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reading"
+  },
+  {
+   "fieldname": "inspection_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-24 16:51:57.011545",
+ "modified_by": "Administrator",
+ "module": "Gm",
+ "name": "Quality Inspection",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

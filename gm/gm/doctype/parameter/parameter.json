@@ -1,52 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Vehicle-{####}",
- "creation": "2024-01-21 11:29:19.211326",
+ "autoname": "format:{parameter_name}-{##}",
+ "creation": "2024-01-24 15:07:02.704844",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "vehicle_number",
-  "vehicle_model",
-  "vehicle_brand",
-  "engine_capacity"
+  "parameter_name",
+  "parameter_description",
+  "accepted_value"
  ],
  "fields": [
   {
-   "fieldname": "vehicle_number",
+   "fieldname": "parameter_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Vehicle Number",
+   "label": "Name",
    "reqd": 1
   },
   {
-   "fieldname": "vehicle_model",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Vehicle Model",
-   "options": "Two Wheeler\nThree Wheeler\nFour Wheeler",
-   "reqd": 1
-  },
-  {
-   "fieldname": "vehicle_brand",
-   "fieldtype": "Link",
-   "label": "Brand",
-   "options": "Brand"
-  },
-  {
-   "fieldname": "engine_capacity",
+   "fieldname": "parameter_description",
    "fieldtype": "Data",
-   "label": "Engine Capacity"
+   "label": "Description"
+  },
+  {
+   "fieldname": "accepted_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Accepted Value",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 11:10:22.796679",
+ "modified": "2024-01-24 15:07:02.704844",
  "modified_by": "Administrator",
  "module": "Gm",
- "name": "Vehicle Details",
+ "name": "Parameter",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -63,7 +55,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "parameter_name"
 }

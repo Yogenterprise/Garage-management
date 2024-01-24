@@ -14,7 +14,7 @@
   "vehicle_number",
   "vehicle_model",
   "vehicle_brand",
-  "engine_capccity",
+  "engine_capacity",
   "service_details_section",
   "service_details",
   "total_amount",
@@ -86,13 +86,9 @@
   },
   {
    "fieldname": "vehicle_brand",
-   "fieldtype": "Data",
-   "label": "Brand"
-  },
-  {
-   "fieldname": "engine_capccity",
-   "fieldtype": "Int",
-   "label": "Engine Capacity"
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand"
   },
   {
    "fieldname": "amended_from",
@@ -103,12 +99,17 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "engine_capacity",
+   "fieldtype": "Int",
+   "label": "Engine Capacity"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-21 14:25:28.188714",
+ "modified": "2024-01-24 12:31:44.611345",
  "modified_by": "Administrator",
  "module": "Gm",
  "name": "Job Cart",
