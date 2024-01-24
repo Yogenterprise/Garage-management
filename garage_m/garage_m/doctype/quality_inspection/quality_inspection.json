@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "QI.##",
+ "creation": "2024-01-24 15:38:07.653466",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_cart_reference",
+  "work_order_reference",
+  "parameter",
+  "description",
+  "acceptable_value",
+  "reading",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_cart_reference",
+   "fieldtype": "Data",
+   "label": "job cart reference"
+  },
+  {
+   "fieldname": "work_order_reference",
+   "fieldtype": "Data",
+   "label": "work order reference"
+  },
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Link",
+   "label": "parameter",
+   "options": "Parameter_doc"
+  },
+  {
+   "fetch_from": "parameter.description",
+   "fieldname": "description",
+   "fieldtype": "Read Only",
+   "label": "description"
+  },
+  {
+   "fetch_from": "parameter.acceptablevalue",
+   "fieldname": "acceptable_value",
+   "fieldtype": "Read Only",
+   "label": "acceptable value"
+  },
+  {
+   "fieldname": "reading",
+   "fieldtype": "Data",
+   "label": "reading"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-24 17:49:58.211559",
+ "modified_by": "Administrator",
+ "module": "Garage M",
+ "name": "Quality_inspection",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

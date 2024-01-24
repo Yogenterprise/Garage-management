@@ -15,63 +15,107 @@
   "vehichle_model",
   "vehichle_brand",
   "brand",
-  "engine_capacity"
+  "engine_capacity",
+  "mechanic_remarks",
+  "job_status",
+  "amended_from",
+  "quality_inspection",
+  "quality_inspect",
+  "average"
  ],
  "fields": [
   {
    "fieldname": "job_cart_reference",
-   "fieldtype": "Link",
-   "label": "Job cart reference",
-   "options": "Job_cart"
+   "fieldtype": "Data",
+   "label": "Job cart reference"
   },
   {
    "fieldname": "service_name",
    "fieldtype": "Data",
-   "label": "service_name",
-   "options": "Job_cart"
+   "label": "service_name"
   },
   {
    "fieldname": "quantity",
    "fieldtype": "Float",
-   "label": "quantity",
-   "options": "Job_cart"
+   "label": "quantity"
   },
   {
    "fieldname": "vehichle_details",
-   "fieldtype": "Data",
+   "fieldtype": "Section Break",
    "label": "vehichle_details"
   },
   {
    "fieldname": "vehicle_no",
-   "fieldtype": "Link",
+   "fieldtype": "Read Only",
    "label": "vehicle_no",
-   "options": "Job_cart"
+   "read_only": 1
   },
   {
    "fieldname": "vehichle_model",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "vehichle_model",
    "read_only": 1
   },
   {
    "fieldname": "vehichle_brand",
-   "fieldtype": "Data",
-   "label": "vehichle_brand"
+   "fieldtype": "Read Only",
+   "label": "vehichle_brand",
+   "read_only": 1
   },
   {
    "fieldname": "brand",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "brand"
   },
   {
    "fieldname": "engine_capacity",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "engine_capacity"
+  },
+  {
+   "fieldname": "mechanic_remarks",
+   "fieldtype": "Small Text",
+   "label": "mechanic_remarks"
+  },
+  {
+   "default": "0",
+   "fieldname": "job_status",
+   "fieldtype": "Check",
+   "label": "job status"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Work_order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "quality_inspection",
+   "fieldtype": "Check",
+   "label": "Quality inspection"
+  },
+  {
+   "depends_on": "eval: doc.quality_inspection ==1",
+   "fieldname": "quality_inspect",
+   "fieldtype": "Table",
+   "label": "quality_inspection_details",
+   "options": "Quality_inspection"
+  },
+  {
+   "fieldname": "average",
+   "fieldtype": "Data",
+   "label": "average"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-21 14:33:30.575546",
+ "modified": "2024-01-24 18:14:20.767737",
  "modified_by": "Administrator",
  "module": "Garage M",
  "name": "Work_order",

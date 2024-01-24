@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "QC.####",
+ "creation": "2024-01-24 16:58:02.405487",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_cart_reference",
+  "work_order_reference",
+  "parameter",
+  "description",
+  "acceptable_value",
+  "reading",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_cart_reference",
+   "fieldtype": "Read Only",
+   "label": "job cart reference"
+  },
+  {
+   "fieldname": "work_order_reference",
+   "fieldtype": "Read Only",
+   "label": "work order reference"
+  },
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Read Only",
+   "label": "parameter"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Read Only",
+   "label": "description"
+  },
+  {
+   "fieldname": "acceptable_value",
+   "fieldtype": "Read Only",
+   "label": "acceptable value"
+  },
+  {
+   "fieldname": "reading",
+   "fieldtype": "Data",
+   "label": "reading"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "status"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Quality_certification",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-24 17:50:53.454718",
+ "modified_by": "Administrator",
+ "module": "Garage M",
+ "name": "Quality_certification",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
