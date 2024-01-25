@@ -25,7 +25,8 @@
   "engine_capacity",
   "inspection_details_section",
   "inspection_details",
-  "amended_from"
+  "amended_from",
+  "average_rating"
  ],
  "fields": [
   {
@@ -144,12 +145,18 @@
    "label": "Inspection Details",
    "mandatory_depends_on": "inspection_required",
    "options": "Quality Inspection"
+  },
+  {
+   "fieldname": "average_rating",
+   "fieldtype": "Data",
+   "label": "Average Rating",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-24 16:54:45.364078",
+ "modified": "2024-01-25 11:24:09.485030",
  "modified_by": "Administrator",
  "module": "Gm",
  "name": "Work order",
