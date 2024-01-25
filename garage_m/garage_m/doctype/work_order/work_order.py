@@ -9,11 +9,18 @@ class Work_order(Document):
 		if self.job_cart_reference and  self.job_status==1:
 			pass
 		else:
-			frappe.throw(f"please fill chek box and reference")
-		# JC=frappe.get_doc({'doctype':"Job_cart"})
-		# for row in JC.get("service_table"):
-		# 	frappe.msgprint("hahhhaha")
-		# 	row.status_of_work_order="accepted"
+			frappe.throw(f"please fill chek box and reference in work_order")
+		JC = frappe.get_doc('Job_cart', {'name': self.job_cart_reference})
+		for row in JC.get("service_table"):
+			frappe.msgprint(f"Checking row: {row.name}, work_order_reference: {row.work_order_reference}")
+
+			if row.work_order_reference == self.name:
+				row.status_of_work_order="accepted"
+		JC.save() 
+		frappe.msgprint("Work_order submitted successfully.")
+
+
+
 
 
 
@@ -81,6 +88,7 @@ class Work_order(Document):
 		else:
 			# frappe.msgprint("No quality inspections available.")
 			pass
+
 
 
 				
