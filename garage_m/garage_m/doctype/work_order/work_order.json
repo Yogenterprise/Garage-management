@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "WO.-.####",
  "creation": "2024-01-21 14:33:05.138682",
  "default_view": "List",
  "doctype": "DocType",
@@ -21,7 +22,8 @@
   "amended_from",
   "quality_inspection",
   "quality_inspect",
-  "average"
+  "average",
+  "status_of_work_order"
  ],
  "fields": [
   {
@@ -110,15 +112,21 @@
    "fieldname": "average",
    "fieldtype": "Data",
    "label": "average"
+  },
+  {
+   "fieldname": "status_of_work_order",
+   "fieldtype": "Data",
+   "label": "status of work order"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-24 18:14:20.767737",
+ "modified": "2024-01-25 16:10:16.396537",
  "modified_by": "Administrator",
  "module": "Garage M",
  "name": "Work_order",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

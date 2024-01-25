@@ -12,7 +12,8 @@
   "rate",
   "description",
   "amount",
-  "work_order_reference"
+  "work_order_reference",
+  "status_of_work_order"
  ],
  "fields": [
   {
@@ -59,12 +60,17 @@
    "label": "work_order_reference",
    "options": "Work_order",
    "read_only": 1
+  },
+  {
+   "fieldname": "status_of_work_order",
+   "fieldtype": "Data",
+   "label": "status_of_work_order"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-24 13:14:58.406510",
+ "modified": "2024-01-25 16:12:07.234329",
  "modified_by": "Administrator",
  "module": "Garage M",
  "name": "Service_details",

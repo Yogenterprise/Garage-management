@@ -10,6 +10,7 @@ class Quality_certification(Document):
 			self.status="accepted"
 		else:
 			self.status="rejected"
+		# if self.
 		wo=frappe.get_doc('Work_order',self.work_order_reference
 		)
 		child_table=wo.get("quality_inspect")

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "brand_names",
  "creation": "2024-01-21 11:53:30.419417",
  "default_view": "List",
  "doctype": "DocType",
@@ -12,17 +13,17 @@
  "fields": [
   {
    "fieldname": "brand_names",
-   "fieldtype": "Select",
-   "label": "Brand_names",
-   "options": "Toyota\nFord\nHonda\nBMW\nsplendor"
+   "fieldtype": "Data",
+   "label": "Brand_names"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-21 11:53:30.419417",
+ "modified": "2024-01-25 13:19:19.328765",
  "modified_by": "Administrator",
  "module": "Garage M",
  "name": "Brand_name",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -38,7 +39,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "brand_names"
 }

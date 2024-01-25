@@ -23,7 +23,8 @@
   "total_amount",
   "advance_received",
   "net_amount",
-  "amended_from"
+  "amended_from",
+  "work_order_status"
  ],
  "fields": [
   {
@@ -115,12 +116,17 @@
    "fieldtype": "Table",
    "label": "Service Table",
    "options": "Service_details"
+  },
+  {
+   "fieldname": "work_order_status",
+   "fieldtype": "Data",
+   "label": "Work_order_status"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-21 14:09:14.776502",
+ "modified": "2024-01-25 15:54:54.144764",
  "modified_by": "Administrator",
  "module": "Garage M",
  "name": "Job_cart",
